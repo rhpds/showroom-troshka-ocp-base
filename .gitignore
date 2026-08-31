@@ -1,0 +1,4 @@
+# Antora build output and cache
+/www/
+/.cache/
+node_modules/

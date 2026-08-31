@@ -1,0 +1,16 @@
+name: modules
+title: Single Node OpenShift — Base Lab
+version: main
+nav:
+  - modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    page-pagination: true
+    # Resolved at build time; override per-deployment as needed.
+    guid: GUID
+    domain: workshop.local
+    user: rhel
+    bastion_host: bastion
+    page-links:
+      - url: https://github.com/rhpds/showroom-sno-base/issues/new
+        text: Open an Issue (GitHub)

@@ -1,0 +1,26 @@
+site:
+  title: "Single Node OpenShift — Base Lab"
+  start_page: modules::index.adoc
+
+asciidoc:
+  attributes:
+    release-version: main
+    page-pagination: true
+
+content:
+  sources:
+    - url: ./
+      start_path: content
+
+ui:
+  bundle:
+    # nookbag: the same showroom UI bundle Troshka injects via ZT_BUNDLE, kept
+    # here so the site also builds standalone (antora --playbook site.yml).
+    url: https://github.com/rhpds/nookbag/releases/download/nookbag-v0.3.2/nookbag-v0.3.2.zip
+    snapshot: true
+
+output:
+  dir: ./www/www
+
+runtime:
+  cache_dir: ./.cache/antora

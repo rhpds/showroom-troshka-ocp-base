@@ -1,0 +1,24 @@
+= Accessing the OpenShift Console
+
+The *OCP Console* tab proxies the OpenShift web console through the showroom.
+
+== Get the kubeadmin password
+
+From the *Bastion Terminal*, read the generated `kubeadmin` password:
+
+[source,sh,role=execute]
+----
+cat ~/auth/kubeadmin-password; echo
+----
+
+== Log in
+
+Open the *OCP Console* tab and log in as `kubeadmin` using that password.
+
+[TIP]
+====
+The console is served by the cluster ingress router, which routes by hostname.
+Troshka's showroom proxies it by name (the `Host` header and TLS SNI are set to
+the console's route hostname) so the console's redirects and asset URLs resolve
+correctly through the proxy.
+====

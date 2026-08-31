@@ -1,0 +1,27 @@
+= Using the Bastion Terminal
+
+The *Bastion Terminal* tab opens a shell on the bastion host as the `{user}`
+user. The bastion already has the OpenShift CLI (`oc`) and the cluster
+kubeconfig configured.
+
+== Confirm access
+
+[source,sh,role=execute]
+----
+oc whoami
+----
+
+== See the cluster node
+
+[source,sh,role=execute]
+----
+oc get nodes
+----
+
+Because this is Single Node OpenShift, you will see exactly one node — it
+carries both the `control-plane` and `worker` roles:
+
+[source,sh,role=execute]
+----
+oc get nodes -o jsonpath='{.items[0].metadata.labels}' | tr ',' '\n' | grep node-role
+----

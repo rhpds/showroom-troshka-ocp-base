@@ -1,0 +1,38 @@
+= Verify the Single-Node Cluster
+
+Run these checks from the *Bastion Terminal*.
+
+== Node status
+
+[source,sh,role=execute]
+----
+oc get nodes -o wide
+----
+
+The single node should report `Ready`.
+
+== Cluster operators
+
+[source,sh,role=execute]
+----
+oc get clusteroperators
+----
+
+Every operator should show `AVAILABLE=True`, `PROGRESSING=False`, and
+`DEGRADED=False`. On a freshly booted SNO it can take a few minutes for all
+operators to settle.
+
+== Cluster version
+
+[source,sh,role=execute]
+----
+oc get clusterversion
+----
+
+A healthy cluster reports `Available=True` with the expected version.
+
+[NOTE]
+====
+That completes the base SNO lab. Extend this guide with your own exercises —
+add pages under `content/modules/ROOT/pages/` and list them in `nav.adoc`.
+====
