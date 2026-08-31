@@ -1,15 +1,19 @@
-= Single Node OpenShift — Base Lab
+= OpenShift — Base Lab
 
-Welcome to the Single Node OpenShift (SNO) base lab environment, provisioned by
-Troshka.
+Welcome to the base OpenShift lab environment, provisioned by Troshka.
 
-This environment contains:
+Depending on which OCP example you deployed, the cluster is one of:
+
+* *Single Node OpenShift (SNO)* — one node that is both control plane and worker.
+* *Compact* — three combined control-plane + worker nodes.
+* *Standard* — three control-plane nodes plus one or more workers.
+
+Either way, the environment contains:
 
 * A *bastion* host (RHEL) with the OpenShift CLI (`oc`) and the cluster
   kubeconfig already in place — use it to drive the lab.
-* A *single-node OpenShift cluster* (`cp-0`) — one node that is both the control
-  plane and the worker.
-* A *BMC network* used to provision the node via Redfish virtual media.
+* The *OpenShift cluster* itself, installed via the Agent-based Installer.
+* A *BMC network* used to provision the nodes via Redfish virtual media.
 
 Work through the lab using the tabs on the right:
 
@@ -18,7 +22,7 @@ Work through the lab using the tabs on the right:
 
 [NOTE]
 ====
-This is a stub lab guide shipped with the SNO base pattern. Replace these pages
-with your own content — the structure (`site.yml` + `content/antora.yml` +
-`modules/ROOT`) is all that Troshka's showroom build requires.
+This is a stub lab guide shipped with the OCP base patterns. Replace these
+pages with your own content — the structure (`site.yml` + `content/antora.yml`
++ `modules/ROOT`) is all that Troshka's showroom build requires.
 ====

@@ -1,5 +1,5 @@
 site:
-  title: "Single Node OpenShift — Base Lab"
+  title: "OpenShift — Base Lab"
   start_page: modules::index.adoc
 
 asciidoc:

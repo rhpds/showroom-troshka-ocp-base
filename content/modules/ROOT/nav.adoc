@@ -1,4 +1,4 @@
 * xref:index.adoc[Overview]
 * xref:01-bastion.adoc[Bastion Terminal]
 * xref:02-console.adoc[OpenShift Console]
-* xref:03-verify-sno.adoc[Verify the Cluster]
+* xref:03-verify-cluster.adoc[Verify the Cluster]

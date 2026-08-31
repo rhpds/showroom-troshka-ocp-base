@@ -1,4 +1,4 @@
-= Verify the Single-Node Cluster
+= Verify the Cluster
 
 Run these checks from the *Bastion Terminal*.
 
@@ -9,7 +9,7 @@ Run these checks from the *Bastion Terminal*.
 oc get nodes -o wide
 ----
 
-The single node should report `Ready`.
+Every node should report `Ready`.
 
 == Cluster operators
 
@@ -19,7 +19,7 @@ oc get clusteroperators
 ----
 
 Every operator should show `AVAILABLE=True`, `PROGRESSING=False`, and
-`DEGRADED=False`. On a freshly booted SNO it can take a few minutes for all
+`DEGRADED=False`. On a freshly booted cluster it can take a few minutes for all
 operators to settle.
 
 == Cluster version
@@ -33,6 +33,7 @@ A healthy cluster reports `Available=True` with the expected version.
 
 [NOTE]
 ====
-That completes the base SNO lab. Extend this guide with your own exercises —
-add pages under `content/modules/ROOT/pages/` and list them in `nav.adoc`.
+That completes the base OpenShift lab. Extend this guide with your own
+exercises — add pages under `content/modules/ROOT/pages/` and list them in
+`nav.adoc`.
 ====

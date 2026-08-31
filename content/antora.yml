@@ -1,5 +1,5 @@
 name: modules
-title: Single Node OpenShift — Base Lab
+title: OpenShift — Base Lab
 version: main
 nav:
   - modules/ROOT/nav.adoc
@@ -12,5 +12,5 @@ asciidoc:
     user: rhel
     bastion_host: bastion
     page-links:
-      - url: https://github.com/rhpds/showroom-troshka-sno-base/issues/new
+      - url: https://github.com/rhpds/showroom-troshka-ocp-base/issues/new
         text: Open an Issue (GitHub)

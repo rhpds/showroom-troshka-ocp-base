@@ -11,17 +11,18 @@ kubeconfig configured.
 oc whoami
 ----
 
-== See the cluster node
+== See the cluster nodes
 
 [source,sh,role=execute]
 ----
 oc get nodes
 ----
 
-Because this is Single Node OpenShift, you will see exactly one node — it
-carries both the `control-plane` and `worker` roles:
+A single-node cluster shows one node carrying both the `control-plane` and
+`worker` roles; compact and standard clusters show three or more nodes. List
+the roles for every node:
 
 [source,sh,role=execute]
 ----
-oc get nodes -o jsonpath='{.items[0].metadata.labels}' | tr ',' '\n' | grep node-role
+oc get nodes -o custom-columns=NAME:.metadata.name,ROLES:.metadata.labels
 ----

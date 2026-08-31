@@ -1,8 +1,10 @@
-# showroom-troshka-sno-base
+# showroom-troshka-ocp-base
 
 A stub [Showroom](https://github.com/rhpds/showroom) lab guide for a base
-**Single Node OpenShift (SNO)** environment provisioned by
-[Troshka](https://github.com/rhpds/troshka).
+**OpenShift** environment provisioned by
+[Troshka](https://github.com/rhpds/troshka). Shared by the OCP example
+templates (single-node, compact 3-node, and standard 3+2) — the bastion,
+cluster domain, and console route are identical across them.
 
 ## Use with Troshka
 
@@ -23,7 +25,7 @@ content/
       index.adoc                      # overview
       01-bastion.adoc                 # Bastion Terminal tab
       02-console.adoc                 # OCP Console (web-proxy tab)
-      03-verify-sno.adoc              # verify the single-node cluster
+      03-verify-cluster.adoc          # verify the cluster
 ```
 
 ## Notes
