@@ -1,6 +1,8 @@
 name: modules
 title: OpenShift — Base Lab
-version: main
+# Unversioned: showroom/nookbag requests pages without a version segment
+# (/www/modules/index.html), so the component must not add a /<version>/ path.
+version: ~
 nav:
   - modules/ROOT/nav.adoc
 asciidoc:
