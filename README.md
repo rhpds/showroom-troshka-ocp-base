@@ -1,4 +1,4 @@
-# showroom-sno-base
+# showroom-troshka-sno-base
 
 A stub [Showroom](https://github.com/rhpds/showroom) lab guide for a base
 **Single Node OpenShift (SNO)** environment provisioned by
