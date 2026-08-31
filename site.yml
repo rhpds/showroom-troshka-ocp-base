@@ -14,9 +14,10 @@ content:
 
 ui:
   bundle:
-    # nookbag: the same showroom UI bundle Troshka injects via ZT_BUNDLE, kept
-    # here so the site also builds standalone (antora --playbook site.yml).
-    url: https://github.com/rhpds/nookbag/releases/download/nookbag-v0.3.2/nookbag-v0.3.2.zip
+    # RHDP showroom theme — a full Antora UI bundle (provides the `default`
+    # layout). Pinned to a stable semver release (not an event tag); the bare
+    # nookbag bundle lacks a default layout and fails the Antora build.
+    url: https://github.com/rhpds/rhdp_showroom_theme/releases/download/v2.0.3/ui-bundle.zip
     snapshot: true
 
 output:
