@@ -1,6 +1,6 @@
 = Verify the Cluster
 
-Run these checks from the *Bastion Terminal*.
+Run these checks from the *Cluster Terminal*.
 
 == Node status
 

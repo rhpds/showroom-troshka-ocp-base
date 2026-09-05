@@ -1,19 +1,18 @@
 = Accessing the OpenShift Console
 
-The *OCP Console* tab proxies the OpenShift web console through the showroom.
+The *OpenShift Console* tab proxies the OpenShift web console through the
+showroom.
 
 == Get the kubeadmin password
 
-From the *Bastion Terminal*, read the generated `kubeadmin` password:
-
-[source,sh,role=execute]
-----
-cat ~/auth/kubeadmin-password; echo
-----
+This environment is bastionless, so there is no `~/auth` directory to read. The
+generated `kubeadmin` password is harvested at install time and shown in the
+Troshka UI: open your cluster's install log / *Access* panel in the Troshka
+project — the `kubeadmin` password is listed there (click to reveal and copy).
 
 == Log in
 
-Open the *OCP Console* tab and log in as `kubeadmin` using that password.
+Open the *OpenShift Console* tab and log in as `kubeadmin` using that password.
 
 [TIP]
 ====

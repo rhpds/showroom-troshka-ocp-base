@@ -1,0 +1,49 @@
+= Using the Cluster Terminal
+
+The *Cluster Terminal* tab opens a shell inside the showroom as an
+unprivileged lab user (`{user}`). The OpenShift CLI (`oc`) is pre-installed and
+the kubeconfig for every cluster in this environment is already configured —
+there is no bastion host to log into.
+
+== Confirm access
+
+[source,sh,role=execute]
+----
+oc whoami
+----
+
+== See the cluster nodes
+
+[source,sh,role=execute]
+----
+oc get nodes
+----
+
+A single-node cluster shows one node carrying both the `control-plane` and
+`worker` roles; compact and standard clusters show three or more nodes. List
+the roles for every node:
+
+[source,sh,role=execute]
+----
+oc get nodes -o custom-columns=NAME:.metadata.name,ROLES:.metadata.labels
+----
+
+== Working with multiple clusters
+
+If this environment has more than one OpenShift cluster, each is available as a
+named context (named after the cluster). List them:
+
+[source,sh,role=execute]
+----
+oc config get-contexts
+----
+
+Switch to a cluster by name:
+
+[source,sh,role=execute]
+----
+oc config use-context <cluster-name>
+----
+
+With a single cluster, its context is already current, so `oc` works with no
+setup.

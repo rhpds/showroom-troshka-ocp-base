@@ -10,15 +10,17 @@ Depending on which OCP example you deployed, the cluster is one of:
 
 Either way, the environment contains:
 
-* A *bastion* host (RHEL) with the OpenShift CLI (`oc`) and the cluster
-  kubeconfig already in place — use it to drive the lab.
-* The *OpenShift cluster* itself, installed via the Agent-based Installer.
+* A *Cluster Terminal* — a shell inside the showroom with the OpenShift CLI
+  (`oc`) and the kubeconfig for every deployed cluster already in place. There
+  is *no bastion host*: the cluster is installed bastionless, from a
+  short-lived ops pod, using the Agent-based Installer.
+* The *OpenShift cluster* itself.
 * A *BMC network* used to provision the nodes via Redfish virtual media.
 
 Work through the lab using the tabs on the right:
 
-* *Bastion Terminal* — a shell on the bastion host.
-* *OCP Console* — the OpenShift web console.
+* *Cluster Terminal* — a shell with `oc` pre-configured.
+* *OpenShift Console* — the OpenShift web console.
 
 [NOTE]
 ====

@@ -3,8 +3,10 @@
 A stub [Showroom](https://github.com/rhpds/showroom) lab guide for a base
 **OpenShift** environment provisioned by
 [Troshka](https://github.com/rhpds/troshka). Shared by the OCP example
-templates (single-node, compact 3-node, and standard 3+2) — the bastion,
-cluster domain, and console route are identical across them.
+templates (single-node, compact 3-node, and standard 3+2). The clusters are
+installed **bastionless** (from a short-lived ops pod, via the Agent-based
+Installer); the lab is driven from an in-showroom *Cluster Terminal* with `oc`
+and every cluster's kubeconfig pre-configured — there is no bastion host.
 
 ## Use with Troshka
 
@@ -23,8 +25,8 @@ content/
     nav.adoc                          # left-nav
     pages/
       index.adoc                      # overview
-      01-bastion.adoc                 # Bastion Terminal tab
-      02-console.adoc                 # OCP Console (web-proxy tab)
+      01-terminal.adoc                # Cluster Terminal tab (oc + kubeconfigs)
+      02-console.adoc                 # OpenShift Console (web-proxy tab)
       03-verify-cluster.adoc          # verify the cluster
 ```
 

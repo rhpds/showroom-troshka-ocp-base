@@ -11,8 +11,8 @@ asciidoc:
     # Resolved at build time; override per-deployment as needed.
     guid: GUID
     domain: workshop.local
-    user: rhel
-    bastion_host: bastion
+    # The Cluster Terminal shell runs as this unprivileged lab user.
+    user: labuser
     page-links:
       - url: https://github.com/rhpds/showroom-troshka-ocp-base/issues/new
         text: Open an Issue (GitHub)
